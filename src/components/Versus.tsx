@@ -17,7 +17,7 @@ function Versus({ versus, isChallenger = true }: VersusProps) {
         </div>
       </div>
       {!isChallenger && 'is challenging you'}
-      to find where you hid Alex!
+      to guess where to find Alex!
     </div>
   );
 }

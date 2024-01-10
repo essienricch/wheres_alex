@@ -2,6 +2,8 @@
 import behindBuildingImg from '../assets/behind_building.svg';
 import inWeedsImg from '../assets/in_weeds.jpg';
 import { Answer } from '@state/RecordTypes/wheres_alex_vxxx.js';
+import woods from '../../public/woods.jpg';
+import garage from '../../public/house-garage.jpg'
 
 type SelectedAlexLocationProps = {
   answer: Answer;
@@ -14,7 +16,7 @@ function SelectedAlexLocation({ answer, win }: SelectedAlexLocationProps) {
       <div className='flex w-1/2 flex-col gap-2 self-start'>
         <img
           loading='lazy'
-          src={inWeedsImg}
+          src={woods}
           className={`aspect-square w-full self-stretch overflow-hidden rounded-[50%] object-cover object-center
                       ${answer === Answer.InTheWeeds ? '' : 'opacity-40'}`}
           alt={Answer.InTheWeeds}
@@ -29,7 +31,7 @@ function SelectedAlexLocation({ answer, win }: SelectedAlexLocationProps) {
                             : 'text-primary-white'
                         }`}
           >
-            In the Weeds
+            In the Woods
           </div>
         )}
       </div>
@@ -41,7 +43,7 @@ function SelectedAlexLocation({ answer, win }: SelectedAlexLocationProps) {
       <div className='flex w-1/2 flex-col gap-2 self-start'>
         <img
           loading='lazy'
-          src={behindBuildingImg}
+          src={garage}
           className={`aspect-square w-full self-stretch overflow-hidden rounded-[50%] object-cover object-center
                       ${
                         answer === Answer.BehindTheBuilding ? '' : 'opacity-40'
@@ -62,7 +64,7 @@ function SelectedAlexLocation({ answer, win }: SelectedAlexLocationProps) {
                             : 'text-primary-white'
                         }`}
           >
-            Behind the Building
+            In the Garage
           </div>
         )}
       </div>
